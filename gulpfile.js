@@ -11,6 +11,7 @@ var config = {
   paths: {
     rootDirectory: '.',
     html: './index.html',
+    css: './assets/styles/*.css',
     ts: './app/src/*.ts',
     tsConfig: './tsconfig.json',
     distDirectory: './app/dist'
@@ -35,6 +36,16 @@ gulp.task('connect', function() {
   });
 });
 
+gulp.task('html', function() {
+  gulp.src(config.paths.html)
+    .pipe(connect.reload());
+});
+
+gulp.task('css', function() {
+  gulp.src(config.paths.css)
+    .pipe(connect.reload());
+});
+
 gulp.task('ts', function() {
   var tsConfig = JSON.parse(fs.readFileSync(config.paths.tsConfig,'utf8'));     
     
@@ -45,7 +56,9 @@ gulp.task('ts', function() {
 });
 
 gulp.task('watch', function() {
+  gulp.watch(config.paths.html, ['html']);
+  gulp.watch(config.paths.css, ['css']);
   gulp.watch(config.paths.ts, ['ts']);
 });
 
-gulp.task('default', ['ts', 'open']);
+gulp.task('default', ['ts', 'open', 'watch']);

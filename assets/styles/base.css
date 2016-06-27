@@ -1,0 +1,13 @@
+p.clear {
+  clear: both;
+}
+
+.rank {
+  float: left;
+  width: 20px;
+}
+
+.name {
+  float: left;
+}
+
