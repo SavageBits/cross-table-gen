@@ -4,10 +4,16 @@ p.clear {
 
 .rank {
   float: left;
-  width: 20px;
+  width: 40px;
+}
+
+.rating {
+  float: left;
+  width: 75px;
 }
 
 .name {
   float: left;
+  width: 200px;
 }
 

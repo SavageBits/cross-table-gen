@@ -4,6 +4,7 @@
     "firstName" : "Ray",
     "lastName" : "Robson",
     "rank" : 1,
+    "rating" : 2773,
     "matches" : [
       {
         "playerId" : 5,
@@ -24,6 +25,7 @@
     "firstName" : "Fabiano",
     "lastName" : "Caruano",
     "rank" : 2,
+    "rating" : 2873,
     "matches" : [
       {
         "playerId" : 5,
@@ -44,6 +46,7 @@
     "firstName" : "Wesley",
     "lastName" : "So",
     "rank" : 3,
+    "rating" : 2793,
     "matches" : [
       {
       
