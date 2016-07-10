@@ -3,10 +3,11 @@ var typescript = require('gulp-typescript');
 var fs = require('fs');
 var open = require('gulp-open');
 var connect = require('gulp-connect');
+var os = require('os');
 require('babel-polyfill');
 
 var config = {  
-  port: 9008,
+  port: 9009,
   devBaseUrl: 'http://localhost',  
   paths: {
     rootDirectory: '.',
@@ -15,13 +16,14 @@ var config = {
     ts: './app/src/*.ts',
     tsConfig: './tsconfig.json',
     distDirectory: './app/dist'
-  }
+  },
+  browser: os.platform() === 'win32' ? 'chrome' : 'google chrome'
 }
 
 gulp.task('open', ['connect'], function() {
   gulp.src('')
     .pipe(open({
-      app: 'chrome',
+      app: config.browser,
       uri: config.devBaseUrl + ':' + config.port + '/'
     }));
 });
