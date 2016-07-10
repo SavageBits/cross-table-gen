@@ -1,19 +1,93 @@
+
+body {
+  text-transform: uppercase;
+  font-family: 'Questrial', sans-serif;
+}
+
+#container {
+  width: 930px;
+}
+
+#banner {
+  background-image: url('/assets/images/sample-header.png');
+  background-repeat:  no-repeat;
+  width: 930px;
+  height: 158px;
+}
+
+/*#header * {
+  background-color: #000;
+  color: #FFF;
+  padding: 5px;
+}*/
+
+#header {
+  background-color: #000;
+  color: #FFF;
+  padding: 0px;
+  /*height: 26px;*/
+  float: left;
+  width: 930px;
+}
+
+#header * {
+  /*background-color: #000;*/
+}
+
 p.clear {
   clear: both;
+}
+
+.player {
+  background-color: #DDD;
 }
 
 .rank {
   float: left;
   width: 40px;
+  color: #FFF;
+  padding: 5px;
+  text-align: center;
+}
+
+.rank-row {
+  color: #000;
+}
+
+.rank-alternate {
+  background-color: #000;
+}
+
+.match-score {
+  color: #000;
 }
 
 .rating {
   float: left;
   width: 75px;
+  padding: 5px;
+
 }
 
 .name {
   float: left;
   width: 200px;
+  padding: 5px;
 }
+
+.first-name {
+
+}
+
+.last-name {
+  font-weight: bold;
+}
+
+.self {
+  background-color: #999;
+  color: #FFF;
+}
+
+
+
 

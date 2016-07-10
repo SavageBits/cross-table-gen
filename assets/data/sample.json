@@ -34,6 +34,23 @@
     ]
   },
   {
+    "id" : 32,
+    "firstName" : "Hikaru",
+    "lastName" : "Nakamura",
+    "rank" : 4,
+    "rating" : 2787,
+    "matches" : [
+      {
+        "playerId" : 27,
+        "points" : 1
+      },
+      {
+        "playerId" : 22,
+        "points" : 0.5
+      }
+    ]
+  },
+  {
     "id" : 27,
     "firstName" : "Wesley",
     "lastName" : "So",
@@ -47,6 +64,10 @@
       {
         "playerId" : 22,
         "points" : 0.5
+      },
+      {
+        "playerId" : 32,
+        "points" : 0
       }
     ]
   }
