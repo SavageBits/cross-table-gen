@@ -3,7 +3,7 @@
     "id" : 22,
     "firstName" : "Fabiano",
     "lastName" : "Caruano",
-    "rank" : 2,
+    "rank" : 4,
     "rating" : 2873,
     "matches" : [
       {
@@ -37,7 +37,7 @@
     "id" : 32,
     "firstName" : "Hikaru",
     "lastName" : "Nakamura",
-    "rank" : 4,
+    "rank" : 2,
     "rating" : 2787,
     "matches" : [
       {

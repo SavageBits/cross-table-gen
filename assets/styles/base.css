@@ -69,6 +69,12 @@ p.clear {
 
 }
 
+.score {
+  float: left;
+  width: 75px;
+  padding: 5px;
+}
+
 .name {
   float: left;
   width: 200px;

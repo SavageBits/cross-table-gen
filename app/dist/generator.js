@@ -18,12 +18,13 @@ $.getJSON('/assets/data/sample.json', function (data) {
             else
                 $(div).append('<div class=\'rank match-score\'>' + getMatchPoints(data, element.id, data[i].id) + '</div>');
         }
+        $(div).append('<div class=\'score\'>' + getTotalPoints(data, element.id) + '</div>');
         $(div).append('<p class=\'clear\'>');
     });
 });
 function sortPlayers(data) {
     data.sort(function (a, b) {
-        return parseInt(a.rank) - parseInt(b.rank);
+        return getTotalPoints(data, b.id) - getTotalPoints(data, a.id);
     });
 }
 function printMatchColumnHeaders(numberOfPlayers) {
@@ -31,6 +32,7 @@ function printMatchColumnHeaders(numberOfPlayers) {
         var alternateClass = i % 2 == 0 ? '' : 'rank-alternate';
         $('#header').append('<div class=\'rank ' + alternateClass + ' column\'>' + i + '</div>');
     }
+    $('#header').append('<div class=\'score\'>Score</div>');
 }
 function getMatchPoints(data, player1Id, player2Id) {
     var player1 = findPlayer(data, player1Id);
@@ -41,6 +43,16 @@ function getMatchPoints(data, player1Id, player2Id) {
     if (matchPoints == 0.5)
         matchPoints = '1/2';
     return matchPoints == null ? '' : matchPoints;
+}
+function getTotalPoints(data, playerId) {
+    var player = findPlayer(data, playerId);
+    var score = 0;
+    if (typeof player.id != 'undefined') {
+        player.matches.forEach(function (element) {
+            score += element.points;
+        });
+    }
+    return score;
 }
 function findPlayer(data, playerId) {
     var player = {};
